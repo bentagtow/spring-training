@@ -8,6 +8,7 @@ public class BinarySearchImpl {
 	//sort array
 	//search array
 	//return the result
+	
 	@Autowired
 	private SortAlgorithm sortAlgorithm;
 	
