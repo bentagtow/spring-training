@@ -1,13 +1,14 @@
-package com.springbasics.demo;
+package com.springbasics.demo.basic;
+
 
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
-@Qualifier("bubble")
-public class BubbleSortAlgorithm implements SortAlgorithm {
+@Qualifier("quick")
+public class QuickSortAlgorithm implements SortAlgorithm {
 	public int[] sort(int[] numbers) {
-		// Logic for Bubble Sort
+		// Logic for Quick Sort
 		return numbers;
 	}
 }
