@@ -1,11 +1,12 @@
 package com.springbasics.demo;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ApplicationContext;
-
 import com.springbasics.demo.basic.BinarySearchImpl;
-@SpringBootApplication
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+@ComponentScan
 public class DemoApplicationBasic {
 	
 	//things you need to tell Spring: 
@@ -14,27 +15,23 @@ public class DemoApplicationBasic {
 	//3. Where to search for beans?
 
 	public static void main(String[] args) {
-//		BinarySearchImpl binarySearch = 
-//				new BinarySearchImpl(new QuickSortAlgorithm());
-//		
-//		
-//		int result = binarySearch.binarySearch(new int[] {12, 4, 6}, 3);
-//		
-//		System.out.println(result);
-		ApplicationContext applicationContext = 
-				SpringApplication.run(DemoApplicationBasic
-						.class, args);
-		BinarySearchImpl binarySearch = 
-				applicationContext.getBean(BinarySearchImpl.class);
 
-		BinarySearchImpl binarySearch1 = 
-				applicationContext.getBean(BinarySearchImpl.class);
+		try (AnnotationConfigApplicationContext applicationContext =
+					 new AnnotationConfigApplicationContext(DemoApplicationBasic.class)) {
 
-		System.out.println(binarySearch);
-		System.out.println(binarySearch1);
-		
-		int result = 
-				binarySearch.binarySearch(new int[] { 12, 4, 6 }, 3);
-		System.out.println(result);
+			BinarySearchImpl binarySearch =
+					applicationContext.getBean(BinarySearchImpl.class);
+
+			BinarySearchImpl binarySearch1 =
+					applicationContext.getBean(BinarySearchImpl.class);
+
+			System.out.println(binarySearch);
+			System.out.println(binarySearch1);
+
+			int result =
+					binarySearch.binarySearch(new int[]{12, 4, 6}, 3);
+			System.out.println(result);
+//		applicationContext.close();
+		}
 	}
 }
