@@ -6,7 +6,7 @@ import org.springframework.context.ApplicationContext;
 
 import com.springbasics.demo.basic.BinarySearchImpl;
 @SpringBootApplication
-public class DemoApplication {
+public class DemoApplicationBasic {
 	
 	//things you need to tell Spring: 
 	//1. What are the Beans?
@@ -22,7 +22,8 @@ public class DemoApplication {
 //		
 //		System.out.println(result);
 		ApplicationContext applicationContext = 
-				SpringApplication.run(DemoApplication.class, args);
+				SpringApplication.run(DemoApplicationBasic
+						.class, args);
 		BinarySearchImpl binarySearch = 
 				applicationContext.getBean(BinarySearchImpl.class);
 

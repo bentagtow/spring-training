@@ -1,17 +1,16 @@
-package com.springbasics.demo.scope;
+package com.springbasics.componentscan;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
-@Scope("prototype")
-public class PersonDAO {
+public class ComponentDAO {
 	@Autowired
-	JdbcConnection jdbcConnection;
-	public JdbcConnection getJdbcConnection() {
+	ComponentJdbcConnection jdbcConnection;
+	public ComponentJdbcConnection getJdbcConnection() {
 		return jdbcConnection;
 	}
-	public void setJdbcConnection(JdbcConnection jdbcConnection) {
+	public void setJdbcConnection(ComponentJdbcConnection jdbcConnection) {
 		this.jdbcConnection = jdbcConnection;
 	}
 }

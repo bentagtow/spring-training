@@ -1,4 +1,4 @@
-package com.springbasics.demo.scope;
+package com.springbasics.componentscan;
 
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Scope;
@@ -6,8 +6,8 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
-public class JdbcConnection {
-	public JdbcConnection() {
+public class ComponentJdbcConnection {
+	public ComponentJdbcConnection() {
 		System.out.println("JDBC Connection");
 	}
 }
