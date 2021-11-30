@@ -8,6 +8,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import com.springbasics.demo.cdi.SomeCdiBusiness;
 
 //@SpringBootApplication
+
 public class DemoCdiApplication {
 
 	//things you need to tell Spring:
@@ -26,7 +27,7 @@ public class DemoCdiApplication {
 			SomeCdiBusiness business =
 					applicationContext.getBean(SomeCdiBusiness.class);
 
-			LOGGER.info("{} dau-{}", business, business.getSomeCDIDAO());
+			LOGGER.info("{} dau-{}", business, business.getSomeCdiDao());
 		}
 
 	}

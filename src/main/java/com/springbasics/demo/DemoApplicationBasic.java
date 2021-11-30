@@ -1,15 +1,16 @@
 package com.springbasics.demo;
 
-import com.springbasics.demo.basic.BinarySearchImpl;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
+import com.springbasics.demo.basic.BinarySearchImpl;
+
 @Configuration
 @ComponentScan
 public class DemoApplicationBasic {
-	
-	//things you need to tell Spring: 
+
+	//things you need to tell Spring:
 	//1. What are the Beans?
 	//2. What are the dependencies for a bean?
 	//3. Where to search for beans?

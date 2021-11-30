@@ -13,7 +13,7 @@ import com.springbasics.demo.DemoApplicationBasic;
 
 //Load the context 
 @RunWith(SpringRunner.class)
-@ContextConfiguration(classes = DemoApplicationBasic.class)
+@ContextConfiguration(locations = "/testContext.xml")
 public class BinarySearchXMLConfigurationTest {
 
 	//get this bean from the context

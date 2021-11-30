@@ -1,19 +1,31 @@
 package com.springbasics.demo.cdi;
 
+
 import javax.inject.Inject;
 import javax.inject.Named;
 
 @Named
 public class SomeCdiBusiness {
+	
+	@Inject
+	SomeCdiDao someCdiDao;
 
-    @Inject
-    SomeCDIDAU someCDIDAO;
+	public SomeCdiDao getSomeCdiDao() {
+		return someCdiDao;
+	}
 
-    public SomeCDIDAU getSomeCDIDAO() {
-        return someCDIDAO;
-    }
+	public void setSomeCdiDao(SomeCdiDao someCdiDao) {
+		this.someCdiDao = someCdiDao;
+	}
 
-    public void setSomeCDIDAO(SomeCDIDAU someCDIDAO) {
-        this.someCDIDAO = someCDIDAO;
-    }
+	public int findGreatest() {
+		int greatest = Integer.MIN_VALUE;
+		int[] data = someCdiDao.getData();
+		for (int value:data) {
+			if (value > greatest) {
+				greatest = value;
+			}
+		}
+		return greatest;
+	}
 }

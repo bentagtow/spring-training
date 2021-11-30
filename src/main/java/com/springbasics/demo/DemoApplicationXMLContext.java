@@ -8,8 +8,8 @@ import com.springbasics.demo.xml.XMLPersonDAO;
 
 //@ComponentScan
 public class DemoApplicationXMLContext {
-	
-	//things you need to tell Spring: 
+
+	//things you need to tell Spring:
 	//1. What are the Beans?
 	//2. What are the dependencies for a bean?
 	//3. Where to search for beans?

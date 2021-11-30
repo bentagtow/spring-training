@@ -11,12 +11,12 @@ import com.springbasics.componentscan.ComponentDAO;
 @Configuration
 @ComponentScan("com.springbasics.componentscan")
 public class ComponentScanApplication {
-	
-	//things you need to tell Spring: 
+
+	//things you need to tell Spring:
 	//1. What are the Beans?
 	//2. What are the dependencies for a bean?
 	//3. Where to search for beans?
-	
+
 	private static Logger LOGGER =
 			LoggerFactory.getLogger(ComponentScanApplication.class);
 
